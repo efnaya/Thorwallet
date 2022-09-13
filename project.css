@@ -1,0 +1,556 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css);
+@font-face {
+    font-family: syne;
+    src: url(../projectfile/static/Syne-Regular.ttf);
+}
+@font-face {
+    font-family: synee;
+    src: url(../projectfile/static/Syne-Bold.ttf);
+}
+@font-face {
+    font-family: syneee;
+    src: url(../projectfile/static/Syne-Medium.ttf);
+}
+@font-face {
+    font-family: syneeee;
+    src: url(../projectfile/static/Syne-SemiBold.ttf);
+}
+html, body{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    background-color: white ;
+    font-weight: 700;
+}
+.first{
+    background-color: #131619;
+    height: fit-content;
+    /* padding: 20px; */
+}
+.wavy{
+    position: absolute;
+    left: 15%; top: 0px;
+    height: 10px; width: 4px;
+    background-color: #1AE6CC;
+    rotate: 88deg;
+    box-shadow: 2px 0px 0px #1AE6CC,4px 0px 0px #1AE6CC,6px -1px 0px #1AE6CC,10px -2px 0px #1AE6CC, 12px -3px 0px #1AE6CC, 14px -3px 0px #1AE6CC ;
+}
+.header{
+    display: flex;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 180px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    position: relative;
+    left: -90px;
+}
+.logo img{
+    height: 100px;
+    width: 100px;
+}
+.contents{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-family: synee;
+    transition: 1s all;
+}
+.contents .words{
+    width: 100%;
+    display: flex;
+    position: relative;
+    left: -150px;
+    justify-content: space-between;
+    gap: 25px;
+    font-family: synee, sans-serif;
+    /* height: 23px; */
+}
+.contents button{
+    background-color: #131619;
+    color: white;
+    font-weight: 700;
+    font-size: 19px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    /* width: 10px; */
+    outline: none;
+}
+.contents button:hover{
+    color: #1AE6CC;
+    border-bottom: 4px solid white;
+}
+.header3{
+    display: flex;
+    background-color: #131619;
+    align-items: center;
+    width: 190px;
+    
+}
+.header3 button{
+    height: 50px;
+    width: 190px;
+    color: white;
+    background-color: #131619;
+    border: 2px solid #1AE6CC;
+    align-items: center;
+    border-radius: 30px;
+    justify-content: center;
+    font-size: 19px;
+    transition: 1s all;
+}
+.bull{
+    height: 2px;
+    width: 14px;
+    background-color: aqua;
+    position: relative;
+    top: 12px;
+}
+.bullet{
+    display: flex;
+    justify-content: left;
+    align-items: stretch;
+    /* gap: 5px; */
+    column-gap: 10px;
+}
+.header3:hover button{
+    background-color: #1AE6CC;
+    color:black;
+}
+.pro{
+    position: absolute;
+    border: 1.5px solid #1AE6CC;
+    background-color: #131619;
+    left: -15px;
+    top: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    padding-right: 15px;
+    display: none;
+    transition: 6s all;
+    color: white;
+    font-weight: lighter;
+    font-size: 17px;
+    font-family: syne, sans-serif;
+    position: relative;
+}
+button:hover .pro{
+    display: inherit;
+    position: absolute;
+    
+}
+.pro:hover{
+    color: #1AE6CC;
+    list-style-type: none;
+    list-style-position: inside;
+}
+.pro1{
+    position: absolute;
+    border: 1.5px solid #1AE6CC;
+    background-color: #131619;
+    padding: 50px;
+    left: -15px;
+    top: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: space-evenly;
+    text-decoration: none;
+    display: none;
+    transition: 6s all;
+    color: white;
+    font-weight:lighter;
+    font-size: 17px;
+    font-family: syne, sans-serif;
+    
+}
+button:hover .pro1{
+    display: inherit;
+    position: absolute;
+    left: 50%;
+    z-index: 100000;
+    
+}
+.pro2{
+    position: absolute;
+    border: 1.5px solid #1AE6CC;
+    background-color: #131619;
+    left: -15px;
+    top: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    display: none;
+    transition: 6s all;
+    color: white;
+    font-weight: lighter;
+    font-size: 17px;
+    font-family: syne, sans-serif;
+}
+button:hover .pro2{
+    display: inherit;
+    position: absolute;
+    left: 70%;
+    z-index: 100000;
+    
+}
+.body1{
+    display: flex;
+    justify-content:space-around;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+.boddy{
+    position: relative;
+    width: 46%;
+    top: 120px;
+    left:25px;
+}
+.th{
+    font-weight:700px;
+    font-size: 65px;
+    height: 76px;
+    color: white;
+    font-family: synee, sans-serif;
+    position: relative;
+}
+.the{
+    font-weight:400px;
+    font-size: 20px;
+    height: 30px;
+    color: white;
+    font-family: syne,sans-serif;
+    position: relative;
+    top: 100px;
+    /* left: -30%; */
+}
+#haa{
+    position: relative;
+    top: 130px;
+}
+.li img{
+    height: 50px;
+    width: 350px;
+    position: relative;
+    top: 200px;
+    left: 0px;
+
+}
+.slideshow1{
+    position: relative;
+    width: 40%;
+    /* left: 60px; */
+    background-color: #131619;
+    /* top: 30px; */
+    /* height: 100vh; */
+}
+.slideshow1 img{
+    position: relative;
+    height: 110vh;
+    width: 530px;
+
+}
+.second{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 150px;
+    justify-content: space-between;
+    background-color: white;
+}
+.sec{
+    height: 420px;
+    width: 50%;
+    background-color:white;
+    padding: 80px;
+    margin: auto;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+.sec li{
+    list-style-type :circle ;
+    /* background-image: linear-gradient(#1AE6CC,#BCEFEB); */
+    font-size: 30px;
+    font-weight: 700;
+    line-height:35px ;
+    color:#1AE6CC;
+    font-family: synee,sans-serif;
+    position: relative;
+    top: 15px;
+}
+.sec .what{
+    color: black;
+    font-weight: 900;
+    font-family: synee, sans-serif;
+    font-size: 45px;
+
+}
+.sec button{
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    font-size: 19px;
+    border: 2px solid #1AE6CC ;
+    font-family: syne,sans-serif;
+    border-radius: 30px;
+    height: 50px;
+    width: 190px;
+    line-height: 23px;
+    margin-right: 20px;
+    margin-top: 30px;
+    transition: 1s all;
+}
+.sec button:hover{
+    background-color: #1AE6CC;
+} 
+
+.twin{
+    height: 450px;
+    width: 50%;
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle{
+    height: 150px;
+    width: 150px;
+    background-image: linear-gradient(#1AE6cc,#BCEFEB,#1AE6CC);
+    border-radius: 100%;
+    box-shadow: 0px 100px 0px #BCEFEB;
+    position: relative;
+    top: 5%; left: 7%;
+    rotate: 135deg;
+}
+.ast{
+    height: 420px;
+    width: 50%;
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-asterisk{
+    font-size: 200px;
+    color: #1AE6CC;
+}
+.pll{
+    height: 420px;
+    width: 50%;
+    background-image: radial-gradient(#1AE6CC,#BCEFEB,#2DF9A4);
+    background-size: cover;
+    background-color: #1AE6CC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pll img{
+    height: 250px;
+    width: 270px;
+    /* opacity: 0.6; */
+}
+.pll img:hover{
+    transform: scale(1.2);
+}
+.third{
+    position: relative;
+    top: 150px;
+    background-color: white;
+    padding-top: 0px;
+}
+.thirdd{
+    display: flex;
+    justify-content: space-between;
+    gap: 270px;
+    height: 800px;
+    background-image: radial-gradient(#EAFDFA,#EBFDFA,#ECFDFA,#EDFDFA,#EFFDFA,#F0FEFC,#e8fdf8,white,#BCEFEB,white);
+}
+.firstline{
+    width: 2.5px;
+    height: 3500px;
+    background-color: #1AE6CC;
+    position: absolute;
+    /* display: flex; */
+    left: 60px;
+    z-index: 1000;
+}
+.firstline .black{
+    height: 60px;
+    width: 2.5px;
+    background-color: black;
+    position: sticky;
+    top: 400px;
+    margin-top: -40px;
+    z-index: 100000;
+}
+.firstline .blackk{
+    color: black;
+    position: sticky;
+    top: 410px;
+    margin-left: 15px;
+    width: 20px;
+    font-family: synee, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    z-index: 10000;
+}
+.third .the{
+    font-family: synee, sans-serif;
+    font-weight: 700;
+    font-size: 65px;
+    position: relative;
+    top: 170px;
+    color: black;
+    line-height: 75px;
+    align-items: center;
+    width: 50%;
+    left: 25%;
+}
+.secondsec{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+}
+.leftp{
+    width: 40%;
+    position: relative;
+    left: 20%;
+    top: -160%;
+
+}
+.leftp .nuu{
+    font-family: syne,sans-serif;
+    color: #1AE6CC;
+    font-size: 200px;
+    font-weight:700 ;
+    position: relative;
+    left:-20%;
+    transform: scaleX(3);
+    transform: scaleY(1.1);
+}
+.secondline{
+    width: 2.5px;
+    height: 3000px;
+    background-color: #1AE6CC;
+    position: absolute;
+    left: 50%;
+    top: -160%;
+    z-index: 1000;
+}
+.rightp{
+    width: 40%;
+    position: relative;
+    top: -70%;
+    right:-15%;
+    justify-content: center;
+}
+.rightp li{
+    list-style-type : circle;
+    font-size: 30px;
+    font-weight: 700;
+    line-height:35px ;
+    color:#1AE6CC;
+    font-family: synee,sans-serif;
+}
+.rightp .what{
+    color: black;
+    font-weight: 900;
+    font-family: synee, sans-serif;
+    font-size: 45px;
+}
+.rightp .forr{
+    color: black;
+    font-size: 20px ;
+    font-weight: 500;
+    font-family: syneee, sans-serif;
+    position: relative;
+    top: 20px;
+}
+.rightp button{
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    font-size: 19px;
+    border: 2px solid #1AE6CC ;
+    font-family: syne,sans-serif;
+    border-radius: 30px;
+    height: 50px;
+    width: 190px;
+    line-height: 23px;
+    position: relative;
+    top: 80px;
+    transition: 1s all;
+}
+.rightp button:hover{
+    background-color: #1AE6CC;
+}
+
+.leftp li{
+    list-style-type : circle;
+    font-size: 30px;
+    font-weight: 700;
+    line-height:35px ;
+    color:#1AE6CC;
+    font-family: synee,sans-serif;
+}
+.leftp .what{
+    color: black;
+    font-weight: 900;
+    font-family: synee, sans-serif;
+    font-size: 45px;
+}
+.leftp .forr{
+    color: black;
+    font-size: 20px ;
+    font-weight: 500;
+    font-family: syneee, sans-serif;
+    position: relative;
+    top: 20px;
+}
+.leftp button{
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    font-size: 19px;
+    border: 2px solid #1AE6CC ;
+    font-family: syne,sans-serif;
+    border-radius: 30px;
+    height: 50px;
+    width: 190px;
+    line-height: 23px;
+    position: relative;
+    top: 80px;
+    transition: 1s all;
+}
+.leftp button:hover{
+    background-color: #1AE6CC;
+}
+.rightp .nuu{
+    font-family: syne,sans-serif;
+    color: #1AE6CC;
+    font-size: 200px;
+    font-weight:700 ;
+    position: relative;
+    /* left:-20%; */
+    transform: scaleX(3);
+    transform: scaleY(1.1);
+    top: 70%;
+}
+.nuuu{
+    position: relative;
+    top: 700% ;
+    left: -20%;
+    width: 80%;
+
+}
