@@ -1,0 +1,153 @@
+
+function _initMtpModal(options, callback) {
+  var encodeQuery = function(data){
+    let query = ""
+    Object.keys(data).forEach(d => {
+      query += encodeURIComponent(d) + '=' + 
+      encodeURIComponent(data[d]) + '&'
+    });
+       
+    return query.slice(0, -1)
+  }
+
+  var modal = document.getElementById("MtPelerinModal");
+  if (modal) {
+    return callback(modal);
+  }
+  options = options || {};
+  
+  var currentScript = document.currentScript || document.querySelector('script[src*="mtp-widget.js"]')
+  var src = currentScript.getAttribute("src");
+  var url = src.split('/mtp-widget.js')[0];
+
+  //insert style
+  let style = document.createElement('style');
+  style.type = 'text/css';
+  const css = `
+    /* The Modal (background) */
+    #MtPelerinModal.mtp-modal {
+      display: none; /* Hidden by default : none*/
+      position: fixed; /* Stay in place */
+      z-index: 999; /* Sit on top */
+      padding-top: 20px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0); /* Black w/ opacity */
+      outline: 0;
+      font-family: "Helvetica";
+    }
+
+    @media only screen and (max-height: 1024px) {
+      #MtPelerinModal.mtp-modal {
+        padding-top: 0px; /* Location of the box */
+      }
+    }
+
+    @media only screen and (max-width: 330px) {
+      #MtPelerinModal .mtp-modal-content {
+        /*max-height: 630px;*/
+      }
+    }
+
+    /* Modal Content */
+    #MtPelerinModal .mtp-modal-content {
+      top: 5px;
+      background-color: white;
+      margin: auto;
+      border: 1px solid #ffffff;
+      min-height: 600px;
+      width: 90%;
+      min-width: 320px;
+      max-width: 500px;
+      border-radius: 25px;
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      pointer-events: auto;
+      background-clip: padding-box;
+      outline: 0;
+      -webkit-box-shadow: 0px 5px 25px 0px rgba(89,198,242,0.3); 
+      box-shadow: 0px 5px 25px 0px rgba(89,198,242,0.3);
+    }
+
+    #MtPelerinModal .mtp-iframe {
+      position:absolute;
+      height: 100%;
+      width: 100%;
+      border: 0;
+      top: 0px;
+    }
+
+    #MtPelerinModal .mtp-close-button-div {
+      height: 16px;
+      width: 100%;
+      z-index: 100;
+    }
+
+    #MtPelerinModal .mtp-close-button {
+      height: 10px;
+      width: 10px;
+      float: right;
+      margin-top: 8px;
+      margin-right: 8px;
+    }
+  `;
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+      style.appendChild(document.createTextNode(css));
+  }
+  document.head.appendChild(style);
+
+  /*modal structure*/
+  var modalDiv = document.createElement("div");
+  modalDiv.setAttribute("id", "MtPelerinModal");
+  modalDiv.setAttribute("class", "mtp-modal");
+  var modalContentDiv = document.createElement("div");
+  modalContentDiv.setAttribute("class", "mtp-modal-content");
+  modalContentDiv.setAttribute("id", "MtPelerinModalContent");
+
+  /* close button */
+  var closeButtonDiv = document.createElement("div");
+  closeButtonDiv.setAttribute("class", "mtp-close-button-div");
+  var closeButton = document.createElement("img");
+  closeButton.setAttribute("class", "mtp-close-button");
+  closeButton.setAttribute("src", "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjQxLjc1NnB4IiBoZWlnaHQ9IjQxLjc1NnB4IiB2aWV3Qm94PSIwIDAgNDEuNzU2IDQxLjc1NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDEuNzU2IDQxLjc1NjsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTI3Ljk0OCwyMC44NzhMNDAuMjkxLDguNTM2YzEuOTUzLTEuOTUzLDEuOTUzLTUuMTE5LDAtNy4wNzFjLTEuOTUxLTEuOTUyLTUuMTE5LTEuOTUyLTcuMDcsMEwyMC44NzgsMTMuODA5TDguNTM1LDEuNDY1DQoJCWMtMS45NTEtMS45NTItNS4xMTktMS45NTItNy4wNywwYy0xLjk1MywxLjk1My0xLjk1Myw1LjExOSwwLDcuMDcxbDEyLjM0MiwxMi4zNDJMMS40NjUsMzMuMjJjLTEuOTUzLDEuOTUzLTEuOTUzLDUuMTE5LDAsNy4wNzENCgkJQzIuNDQsNDEuMjY4LDMuNzIxLDQxLjc1NSw1LDQxLjc1NWMxLjI3OCwwLDIuNTYtMC40ODcsMy41MzUtMS40NjRsMTIuMzQzLTEyLjM0MmwxMi4zNDMsMTIuMzQzDQoJCWMwLjk3NiwwLjk3NywyLjI1NiwxLjQ2NCwzLjUzNSwxLjQ2NHMyLjU2LTAuNDg3LDMuNTM1LTEuNDY0YzEuOTUzLTEuOTUzLDEuOTUzLTUuMTE5LDAtNy4wNzFMMjcuOTQ4LDIwLjg3OHoiIGZpbGw9IiM5ZTllOWUiLz4NCjwvZz4NCjwvc3ZnPg0K")
+  closeButtonDiv.appendChild(closeButton);
+  closeButtonDiv.addEventListener('click', function () {
+    window.hideMtpModal();
+  })
+
+  /* iframe of the app */
+  var iframe = document.createElement("iframe");
+  iframe.setAttribute("src", url+ '/?' + encodeQuery(options));
+  iframe.setAttribute("class", "mtp-iframe");
+
+  /* body append */
+  modalContentDiv.appendChild(closeButtonDiv);
+  modalContentDiv.appendChild(iframe);
+  modalDiv.appendChild(modalContentDiv);
+  document.body.appendChild(modalDiv);
+
+  modal = document.getElementById("MtPelerinModal");
+  callback(modal);
+}
+
+window.showMtpModal = function (options) {
+  _initMtpModal(options, function (modal) {
+    modal.style.display = "block";
+  });
+}
+
+window.hideMtpModal = function () {
+  var modal = document.getElementById("MtPelerinModal");
+  modal.style.display = "none";
+}
+
+
