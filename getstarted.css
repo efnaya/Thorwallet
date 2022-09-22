@@ -20,7 +20,15 @@ html,body{
     margin: 0px;
     background-color: #0D2A2C;
 }
+
 .sidebar{
+    width: 20%;
+    height: 1000px;
+    background-color: black;
+    border: 1px solid black;
+    
+}
+/* .sidebar{
     position: relative;
     top: 0px;
     left: 0px;
@@ -28,16 +36,264 @@ html,body{
     width: 20%;
     background-color: #000202;
     border: 4px, solid wheat;
+} */
+.h3{
+    color: white !important;
+    font-size: large !important;
+    margin-top: 25px;
+    
 }
-.logo img{
-    scale: 0.35;
+.one{
+    font-size: medium !important;
 }
-.logo{
-    color: white;
-    font-family: montserrat,sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+.imag{
+  display: flex;  
+  margin-left: 60px;
+  margin-top: 10px;
+}
+.imag img{
+    scale: 0.5;
+}
+.mayor{
+    color: rgba(192, 192, 192, 0.452) !important;
     display: flex;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+.mayor:hover{
+    color:#00d3bd !important ;
+}
+.width{
+    width: 25px !important;
+}
+.grid{
+    margin-top: 5px;
+    font-size: large;
+}
+.wallet{
+    color: rgba(128, 128, 128, 0.463);
+    margin-left: 35px;
+   
+}
+.myassets{
+    
+    color: rgba(192, 192, 192, 0.452) !important;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+.myassets:hover{
+    color:#00d3bd !important ;   
+}
+.shit{
+  margin-top: 6px;
+  font-size: large;
+}
+.swap{
+   
+   color: rgba(192, 192, 192, 0.452) !important;
+   display: flex;
+   margin-top: 10px;
+   margin-left: 85px;
+}
+.width2{
+width: 10px;
+}
+.swap:hover{
+    color: #00d3bd !important;
+}
+.swop{
+    margin-top: 7px;
+    font-size: medium;
+}
+.send{
+    color: rgba(192, 192, 192, 0.452) !important;
+   display: flex;
+   margin-top: 10px;
+   margin-left: 85px;
+}
+.send:hover{
+    color: #00d3bd !important;
+}
+.up{
+    margin-top: 8px;
+    font-size:medium;
+}
+.buy{
+    color: rgba(192, 192, 192, 0.452) !important;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 85px;
+    
+    
+}
+.buy:hover{
+    color:#00d3bd !important;
+}
+.right{
+    margin-top: 9px;
+    font-size:medium;
+}
+.sell{
+    color: rgba(192, 192, 192, 0.452) !important;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 85px;
+    
+}
+.sell:hover{
+    color:#00d3bd !important;
+}
+.left{
+    margin-top: 9px;
+    font-size:medium;
+}
+.circle1{
+    margin-left: 20px;
+    margin-top: 9px;
+}
+.circle2{
+    
+    margin-top: 9px;
+}
+.mypools{
+    color: rgba(192, 192, 192, 0.452) !important;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px
+}
+.mypools:hover{
+    color:#00d3bd !important;
+}
+.line1{
+    width: 100%;
+    height: 1px;
+    border: 1px solid black;
+    background: linear-gradient(to right,black,#33b6a9 );
+    margin-top: 20px;
+}
+.earn{
+    color: rgba(128, 128, 128, 0.463);
+    margin-left: 35px;
+    margin-top: 20px;
+}
+.li{
+    color: rgba(192, 192, 192, 0.452) !important;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 40px
+}
+.xxx{
+    margin-top: 5px;
+}
+.li:hover{
+    color: #00d3bd !important;
+}
+.mi{
+    color: rgba(192, 192, 192, 0.452) !important;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 45px;
+}
+.mi:hover{
+color: #00d3bd !important;
+}
+.rad{
+   margin-top: 5px; 
+   margin-left: -5px;
+}
+
+.jmj{
+    color: rgba(192, 192, 192, 0.452) !important;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 45px;
+}
+.land{
+    margin-top: 5px;
+    margin-left: -5px;
+}
+.jmj:hover{
+    color: #00d3bd !important;
+}
+.charger{
+    color: rgba(192, 192, 192, 0.452) !important;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 45px; 
+}
+.ple{
+    margin-top: 5px;
+    margin-left: -5px;  
+}
+.charger:hover{
+    color: #00d3bd !important;
+}
+.line2{
+    height: 2px;
+    width: 100%;
+    border: 1px solid black;
+
+}
+.Ln{
+    color: rgba(128, 128, 128, 0.463);
+    margin-left: 35px;
+    margin-top: 20px;  
+}
+.com{
+    color: rgba(192, 192, 192, 0.452) !important;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 45px; 
+}
+.com:hover{
+    color: #00d3bd !important;
+}
+.upup{
+    margin-top: 7px;
+    margin-left: -5px;  
+}
+.faqs{
+    color: rgba(192, 192, 192, 0.452) !important;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 45px; 
+}
+.faqs:hover{
+    color: #00d3bd !important;
+}
+.fafal{
+    margin-top: 7px;
+    margin-left: -5px;  
+}
+.edu{
+    color: rgba(192, 192, 192, 0.452) !important;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 45px; 
+}
+.edu:hover{
+    color: #00d3bd !important;
+}
+.cap{
+    margin-top: 7px;
+    margin-left: -5px;  
+}
+.line3{
+    height: 1px;
+    width: 100px;
+    border: 1px solid black;
+    color:    rgba(192, 192, 192, 0.452) !important ;
+
+}
+.social{
+    display: flex;
+    font-size: large;
+    color: rgba(192, 192, 192, 0.452) !important;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .body{
     position: absolute;
@@ -267,7 +523,8 @@ html,body{
     margin-left: 40%;
 }
 .body16 button{
-    width: 400px;
+    /* width: 400px; */
+    width: 300%;
     height: 40px;
     background-color: #0BB5C4;
     box-shadow: 0px 0px 40px #0BB5C4;
@@ -277,4 +534,17 @@ html,body{
     font-weight: 700;
     font-size: 14px;
     font-family: montserratt,sans-serif;
+    margin-left: -100%;
+}
+@media (max-width:1040px) {
+    .body16 button{
+        width: 200%;
+        /* margin-left: 5px; */
+        margin-left: -50%;
+    }
+}
+@media (max-width:651px) {
+    .body16{
+        width:50%;
+    }
 }

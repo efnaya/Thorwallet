@@ -1666,3 +1666,61 @@ button:hover .pro2{
 
 }
 
+/* where i started at home */
+@media (max-width:730px) {
+    .ninth img{
+        display: none;
+    }
+    .seventh .bigcir{
+        display: none;
+    }
+    .eleri{
+        margin-left: 90px;
+    }
+    .twelveth .watt{
+        margin-left: -5px;
+    }
+}
+@media (max-width:670px) {
+    .thirteenth .third3{
+        display: none;
+    }
+    .ninth{
+        height: 1500px;
+    }
+    .tenth .vi{
+        margin-left: 0px;
+    }
+    .boddy{
+        left:-80px ;
+    }
+    .boddy #haa{
+        margin-top: 30px;
+    }
+    .bak{
+        font-size: 12px;
+    }
+}
+@media (max-width:550px) {
+    .twelveth{
+        display: none;
+    }
+    .idek{
+        display: none;
+    }
+    .bak{
+        display: none;
+    }
+     #purr{
+        display: none;
+    }
+    .boddy{
+        height: 600px;
+    }
+    .boddy button{
+        margin-top: 40px;
+    }
+    .thirteenth .third2{
+        margin-left: -100px;
+    }
+}
